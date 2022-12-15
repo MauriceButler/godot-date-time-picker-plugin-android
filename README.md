@@ -14,15 +14,21 @@ You will need:
 1. Open the project in Android Studio
 2. Put your downloaded Godot AAR Library into the `app/libs` directory. (Ensure its filename matches `godot-lib*.aar`)
 
+![image](https://user-images.githubusercontent.com/657135/207895601-72328a75-a6b7-4eab-aa4d-cdfe91f0f2a8.png)
+
 3. Compile the project
 
 ### Install Plugin
 
 1. Copy the `app/build/outputs/aar/DateTimePickerPlugin.aar` file and the `app/DateTimePickerPlugin.gdap` file to the `android/plugins` folder into your Godot app directory.
 
+![image](https://user-images.githubusercontent.com/657135/207895849-9cf915a7-aa8d-43fa-bf43-8e5dd1857e24.png)
+
 2. Go to Project -> Export, select the android export, check custom build, and enable the plugin.
 
-### Add the Map View
+![image](https://user-images.githubusercontent.com/657135/207896110-33562e9d-f3c4-4675-849d-deee614874f9.png)
+
+### Use the control
 
 ```gdscript
 extends Node2D
@@ -50,3 +56,5 @@ func _on_Button_pressed():
 	dateTimePickerPlugin.showDateTimePicker("buttonPressed")
 
 ```
+
+![demo gif](https://user-images.githubusercontent.com/657135/207898401-b5f35348-b62e-4824-aaf4-c1ad74c0a2ee.gif)
