@@ -1,0 +1,11 @@
+[config]
+
+name="DateTimePickerPlugin"
+binary_type="local"
+binary="DateTimePickerPlugin.aar"
+
+[dependencies]
+
+local=[]
+remote=[]
+custom_maven_repos=[]

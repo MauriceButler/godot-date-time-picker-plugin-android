@@ -1,0 +1,40 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    namespace 'com.oddsockgames.dateTimePickerPlugin'
+    compileSdk 32
+
+    defaultConfig {
+        minSdk 23
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    libraryVariants.all { variant ->
+        variant.outputs.all { output ->
+            output.outputFileName = "DateTimePickerPlugin.aar"
+        }
+    }
+}
+
+dependencies {
+    compileOnly fileTree(dir: "libs", include:["godot-lib*.aar"])
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+}
